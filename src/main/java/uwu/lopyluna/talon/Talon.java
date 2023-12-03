@@ -12,24 +12,26 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import uwu.lopyluna.talon.baseRegistry.TalonRegistry;
 
 @Mod(Talon.MOD_ID)
 @SuppressWarnings({"all"})
 public class Talon {
+    public static final String NAME = "Talon";
     public static final String MOD_ID = "talon";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Talon()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::commonSetup);
+        IEventBus e = FMLJavaModLoadingContext.get().getModEventBus();
+        e.addListener(this::commonSetup);
 
-        
-
-
+        TalonRegistry.ITEMS.register(e);
+        TalonRegistry.BLOCKS.register(e);
+        TalonRegistry.CREATIVE_MODE_TABS.register(e);
 
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
+        e.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
