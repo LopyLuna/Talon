@@ -2,10 +2,7 @@ package uwu.lopyluna.talon.baseRegistry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -46,6 +43,10 @@ public class TalonRegistry {
             Granite_PB = Item("granite" + PB, ItemProperties),
             Andesite_UT = Item("andesite" + UT, ItemProperties),
             Andesite_PB = Item("andesite" + PB, ItemProperties),
+            Sandstone_UT = Item("sandstone" + UT, ItemProperties),
+            Sandstone_PB = Item("sandstone" + PB, ItemProperties),
+            Red_Sandstone_UT = Item("red_sandstone" + UT, ItemProperties),
+            Red_Sandstone_PB = Item("red_sandstone" + PB, ItemProperties),
             Deepslate_UT = Item("deepslate" + UT, ItemProperties),
             Deepslate_PB = Item("deepslate" + PB, ItemProperties),
             Tuff_UT = Item("tuff" + UT, ItemProperties),
@@ -76,8 +77,9 @@ public class TalonRegistry {
 
             //MATERIALS
 
-            Rose_Gold = Item("rose_gold", ItemProperties),
-            Rose_Gold_Nugget = Item("rose_gold_nugget", ItemProperties);
+            Rose_Gold = Item("rose_gold_ingot", ItemProperties),
+            Rose_Gold_Nugget = Item("rose_gold_nugget", ItemProperties),
+            Copper_Nugget = Item("copper_nugget", ItemProperties);
 
     public static final RegistryObject<CombustableItem>
             Oak_PK = CombustableItem("oak" + PK, 75, ItemProperties),
@@ -166,6 +168,7 @@ public class TalonRegistry {
                         pOutput.accept(Rose_Gold.get());
                         pOutput.accept(Rose_Gold_Nugget.get());
                         pOutput.accept(Rose_Gold_Block.get().asItem());
+                        pOutput.accept(Copper_Nugget.get());
 
 
 
@@ -196,9 +199,26 @@ public class TalonRegistry {
 
 
     public static final RegistryObject<CreativeModeTab> TALON_TAB_UT = CREATIVE_MODE_TABS.register("talon_tab_upgrade_templates",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Rose_Gold.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
                     .title(Component.translatable("Smithing Upgrade"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        pOutput.accept(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
                         pOutput.accept(Cobblestone_UT.get());
                         pOutput.accept(Mossy_Cobblestone_UT.get());
                         pOutput.accept(Diorite_UT.get());
@@ -221,6 +241,6 @@ public class TalonRegistry {
                         pOutput.accept(Cherry_UT.get());
                         pOutput.accept(Crimson_UT.get());
                         pOutput.accept(Warped_UT.get());
-                    }).withSearchBar()
+                    })
                     .build());
 }
