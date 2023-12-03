@@ -19,42 +19,42 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-        CompressRecipeFull(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Block.get().asItem(), 1).save(pWriter);
-        DeCompressRecipe(TalonRegistry.Rose_Gold_Block.get().asItem(), TalonRegistry.Rose_Gold.get(), 9).save(pWriter);
+        CompressRecipeFull(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Block.get().asItem(), 1).save(pWriter, "rose_gold_to_rose_gold_block");
+        DeCompressRecipe(TalonRegistry.Rose_Gold_Block.get().asItem(), TalonRegistry.Rose_Gold.get(), 9).save(pWriter, "rose_gold_block_to_rose_gold");
 
-        CompressRecipeFull(TalonRegistry.Rose_Gold_Nugget.get(), TalonRegistry.Rose_Gold.get(), 1).save(pWriter);
-        DeCompressRecipe(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Nugget.get(), 9).save(pWriter);
+        CompressRecipeFull(TalonRegistry.Rose_Gold_Nugget.get(), TalonRegistry.Rose_Gold.get(), 1).save(pWriter, "rose_gold_nugget_to_rose_gold");
+        DeCompressRecipe(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Nugget.get(), 9).save(pWriter, "rose_gold_to_rose_gold_nugget");
 
 
-        CompressRecipeQuad(TalonRegistry.Oak_PK.get(), Items.OAK_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.OAK_PLANKS, TalonRegistry.Oak_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Oak_PK.get(), Items.OAK_PLANKS, 1).save(pWriter, "oak_pk_to_oak_planks");
+        DeCompressRecipe(Items.OAK_PLANKS, TalonRegistry.Oak_PK.get(), 4).save(pWriter, "oak_planks_to_oak_pk");
 
-        CompressRecipeQuad(TalonRegistry.Spruce_PK.get(), Items.SPRUCE_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.SPRUCE_PLANKS, TalonRegistry.Spruce_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Spruce_PK.get(), Items.SPRUCE_PLANKS, 1).save(pWriter, "spruce_pk_to_spruce_planks");
+        DeCompressRecipe(Items.SPRUCE_PLANKS, TalonRegistry.Spruce_PK.get(), 4).save(pWriter, "spruce_planks_to_spruce_pk");
 
-        CompressRecipeQuad(TalonRegistry.Birch_PK.get(), Items.BIRCH_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.BIRCH_PLANKS, TalonRegistry.Birch_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Birch_PK.get(), Items.BIRCH_PLANKS, 1).save(pWriter, "birch_pk_to_birch_planks");
+        DeCompressRecipe(Items.BIRCH_PLANKS, TalonRegistry.Birch_PK.get(), 4).save(pWriter, "birch_planks_to_birch_pk");
 
-        CompressRecipeQuad(TalonRegistry.Acacia_PK.get(), Items.ACACIA_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.ACACIA_PLANKS, TalonRegistry.Acacia_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Acacia_PK.get(), Items.ACACIA_PLANKS, 1).save(pWriter, "acacia_pk_to_acacia_planks");
+        DeCompressRecipe(Items.ACACIA_PLANKS, TalonRegistry.Acacia_PK.get(), 4).save(pWriter, "acacia_planks_to_acacia_pk");
 
-        CompressRecipeQuad(TalonRegistry.Cherry_PK.get(), Items.CHERRY_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.CHERRY_PLANKS, TalonRegistry.Cherry_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Cherry_PK.get(), Items.CHERRY_PLANKS, 1).save(pWriter, "cherry_pk_to_cherry_planks");
+        DeCompressRecipe(Items.CHERRY_PLANKS, TalonRegistry.Cherry_PK.get(), 4).save(pWriter, "cherry_planks_to_cherry_pk");
 
-        CompressRecipeQuad(TalonRegistry.Crimson_PK.get(), Items.CRIMSON_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.CRIMSON_PLANKS, TalonRegistry.Crimson_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Crimson_PK.get(), Items.CRIMSON_PLANKS, 1).save(pWriter, "crimson_pk_to_crimson_planks");
+        DeCompressRecipe(Items.CRIMSON_PLANKS, TalonRegistry.Crimson_PK.get(), 4).save(pWriter, "crimson_planks_to_crimson_pk");
 
-        CompressRecipeQuad(TalonRegistry.Dark_Oak_PK.get(), Items.DARK_OAK_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.DARK_OAK_PLANKS, TalonRegistry.Dark_Oak_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Dark_Oak_PK.get(), Items.DARK_OAK_PLANKS, 1).save(pWriter, "dark_oak_pk_to_dark_oak_planks");
+        DeCompressRecipe(Items.DARK_OAK_PLANKS, TalonRegistry.Dark_Oak_PK.get(), 4).save(pWriter, "dark_oak_planks_to_dark_oak_pk");
 
-        CompressRecipeQuad(TalonRegistry.Jungle_PK.get(), Items.JUNGLE_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.JUNGLE_PLANKS, TalonRegistry.Jungle_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Jungle_PK.get(), Items.JUNGLE_PLANKS, 1).save(pWriter, "jungle_pk_to_jungle_planks");
+        DeCompressRecipe(Items.JUNGLE_PLANKS, TalonRegistry.Jungle_PK.get(), 4).save(pWriter, "jungle_planks_to_jungle_pk");
 
-        CompressRecipeQuad(TalonRegistry.Mangrove_PK.get(), Items.MANGROVE_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.MANGROVE_PLANKS, TalonRegistry.Mangrove_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Mangrove_PK.get(), Items.MANGROVE_PLANKS, 1).save(pWriter, "mangrove_pk_to_mangrove_planks");
+        DeCompressRecipe(Items.MANGROVE_PLANKS, TalonRegistry.Mangrove_PK.get(), 4).save(pWriter, "mangrove_planks_to_mangrove_pk");
 
-        CompressRecipeQuad(TalonRegistry.Warped_PK.get(), Items.WARPED_PLANKS, 1).save(pWriter);
-        DeCompressRecipe(Items.WARPED_PLANKS, TalonRegistry.Warped_PK.get(), 4).save(pWriter);
+        CompressRecipeQuad(TalonRegistry.Warped_PK.get(), Items.WARPED_PLANKS, 1).save(pWriter, "warped_pk_to_warped_planks");
+        DeCompressRecipe(Items.WARPED_PLANKS, TalonRegistry.Warped_PK.get(), 4).save(pWriter, "warped_planks_to_warped_pk");
     }
 
 

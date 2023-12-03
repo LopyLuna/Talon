@@ -22,16 +22,18 @@ public class DataGens {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        boolean s = event.includeServer();
+        boolean c = event.includeClient();
 
 
-        generator.addProvider(event.includeServer(), new Recipes(packOutput));
-        generator.addProvider(event.includeServer(), BlockLootTables.create(packOutput));
+        generator.addProvider(s, new Recipes(packOutput));
+        generator.addProvider(s, BlockLootTables.create(packOutput));
 
-        generator.addProvider(event.includeClient(), new Blockstate(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ItemModel(packOutput, existingFileHelper));
+        generator.addProvider(c, new Blockstate(packOutput, existingFileHelper));
+        generator.addProvider(c, new ItemModel(packOutput, existingFileHelper));
 
-        BlockTag blockTagGenerator = generator.addProvider(event.includeServer(), new BlockTag(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ItemTag(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+        BlockTag blockTagGenerator = generator.addProvider(s, new BlockTag(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(s, new ItemTag(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
     }
 
 }

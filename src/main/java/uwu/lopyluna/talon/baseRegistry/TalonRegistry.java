@@ -27,7 +27,7 @@ import static uwu.lopyluna.talon.baseRegistry.TalonRegistry.TalonProperties.Item
 public class TalonRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Talon.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Talon.MOD_ID);
-    public static String UT = "_upgrade_template";
+    public static String UT = "_smithing_template";
     public static String PB = "_pebble";
     public static String PK = "_planks";
 
@@ -169,51 +169,58 @@ public class TalonRegistry {
 
 
 
-
-                        pOutput.accept(Cobblestone_UT.get());
                         pOutput.accept(Cobblestone_PB.get());
-                        pOutput.accept(Mossy_Cobblestone_UT.get());
                         pOutput.accept(Mossy_Cobblestone_PB.get());
-                        pOutput.accept(Diorite_UT.get());
                         pOutput.accept(Diorite_PB.get());
-                        pOutput.accept(Granite_UT.get());
                         pOutput.accept(Granite_PB.get());
-                        pOutput.accept(Andesite_UT.get());
                         pOutput.accept(Andesite_PB.get());
-                        pOutput.accept(Deepslate_UT.get());
                         pOutput.accept(Deepslate_PB.get());
-                        pOutput.accept(Tuff_UT.get());
                         pOutput.accept(Tuff_PB.get());
-                        pOutput.accept(Calcite_UT.get());
                         pOutput.accept(Calcite_PB.get());
-                        pOutput.accept(Dripstone_UT.get());
                         pOutput.accept(Dripstone_PB.get());
-                        pOutput.accept(Netherrack_UT.get());
                         pOutput.accept(Netherrack_PB.get());
-                        pOutput.accept(Blackstone_UT.get());
                         pOutput.accept(Blackstone_PB.get());
-                        pOutput.accept(Endstone_UT.get());
                         pOutput.accept(Endstone_PB.get());
-                        pOutput.accept(Oak_UT.get());
                         pOutput.accept(Oak_PK.get());
-                        pOutput.accept(Spruce_UT.get());
                         pOutput.accept(Spruce_PK.get());
-                        pOutput.accept(Birch_UT.get());
                         pOutput.accept(Birch_PK.get());
-                        pOutput.accept(Jungle_UT.get());
                         pOutput.accept(Jungle_PK.get());
-                        pOutput.accept(Acacia_UT.get());
                         pOutput.accept(Acacia_PK.get());
-                        pOutput.accept(Dark_Oak_UT.get());
                         pOutput.accept(Dark_Oak_PK.get());
-                        pOutput.accept(Mangrove_UT.get());
                         pOutput.accept(Mangrove_PK.get());
-                        pOutput.accept(Cherry_UT.get());
                         pOutput.accept(Cherry_PK.get());
-                        pOutput.accept(Crimson_UT.get());
                         pOutput.accept(Crimson_PK.get());
-                        pOutput.accept(Warped_UT.get());
                         pOutput.accept(Warped_PK.get());
-                    })
+                    }).withSearchBar()
+                    .build());
+
+
+    public static final RegistryObject<CreativeModeTab> TALON_TAB_UT = CREATIVE_MODE_TABS.register("talon_tab_upgrade_templates",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Rose_Gold.get()))
+                    .title(Component.translatable("Smithing Upgrade"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(Cobblestone_UT.get());
+                        pOutput.accept(Mossy_Cobblestone_UT.get());
+                        pOutput.accept(Diorite_UT.get());
+                        pOutput.accept(Granite_UT.get());
+                        pOutput.accept(Andesite_UT.get());
+                        pOutput.accept(Deepslate_UT.get());
+                        pOutput.accept(Tuff_UT.get());
+                        pOutput.accept(Calcite_UT.get());
+                        pOutput.accept(Dripstone_UT.get());
+                        pOutput.accept(Netherrack_UT.get());
+                        pOutput.accept(Blackstone_UT.get());
+                        pOutput.accept(Endstone_UT.get());
+                        pOutput.accept(Oak_UT.get());
+                        pOutput.accept(Spruce_UT.get());
+                        pOutput.accept(Birch_UT.get());
+                        pOutput.accept(Jungle_UT.get());
+                        pOutput.accept(Acacia_UT.get());
+                        pOutput.accept(Dark_Oak_UT.get());
+                        pOutput.accept(Mangrove_UT.get());
+                        pOutput.accept(Cherry_UT.get());
+                        pOutput.accept(Crimson_UT.get());
+                        pOutput.accept(Warped_UT.get());
+                    }).withSearchBar()
                     .build());
 }
