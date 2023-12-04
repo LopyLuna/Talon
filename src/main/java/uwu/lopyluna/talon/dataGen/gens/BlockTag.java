@@ -19,8 +19,9 @@ public class BlockTag extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(TalonRegistry.Rose_Gold_Block.get()
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                TalonRegistry.Rose_Gold_Block.get(),
+                TalonRegistry.Kiln.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)

@@ -1,6 +1,7 @@
 package uwu.lopyluna.talon;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import uwu.lopyluna.talon.baseRegistry.TalonRegistry;
+import uwu.lopyluna.talon.baseRegistry.block_properties.kiln.KilnScreen;
 
 @Mod(Talon.MOD_ID)
 @SuppressWarnings({"all"})
@@ -28,6 +30,9 @@ public class Talon {
 
         TalonRegistry.ITEMS.register(e);
         TalonRegistry.BLOCKS.register(e);
+        TalonRegistry.BLOCK_ENTITIES.register(e);
+        TalonRegistry.SERIALIZERS.register(e);
+        TalonRegistry.MENUS.register(e);
         TalonRegistry.CREATIVE_MODE_TABS.register(e);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -54,6 +59,7 @@ public class Talon {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(TalonRegistry.KilnMenu.get(), KilnScreen::new);
 
         }
     }

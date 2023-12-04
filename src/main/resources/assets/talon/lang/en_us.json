@@ -1,6 +1,7 @@
 {
   "item.talon.rose_gold_ingot": "Rose Gold Ingot",
   "item.talon.rose_gold_nugget": "Rose Gold Nugget",
+  "item.talon.copper_nugget": "Copper Nugget",
   "item.talon.oak_planks": "Oak Board",
   "item.talon.spruce_planks": "Spruce Board",
   "item.talon.birch_planks": "Birch Board",
@@ -51,5 +52,6 @@
   "item.talon.endstone_smithing_template": "Endstone Smithing Template",
 
 
-  "block.talon.rose_gold_block": "Block of Rose Gold"
+  "block.talon.rose_gold_block": "Block of Rose Gold",
+  "block.talon.kiln": "Kiln"
 }

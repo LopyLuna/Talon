@@ -1,0 +1,10 @@
+{
+  "parent": "talon:block/orientable_with_bottom_and_back",
+  "textures": {
+    "bottom": "talon:block/kiln_bottom",
+    "front": "talon:block/kiln_front",
+    "side": "talon:block/kiln_side",
+    "top": "talon:block/kiln_top",
+    "back": "talon:block/kiln_back"
+  }
+}

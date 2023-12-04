@@ -2,18 +2,28 @@ package uwu.lopyluna.talon.baseRegistry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraftforge.common.extensions.IForgeMenuType;
+import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 import uwu.lopyluna.talon.Talon;
+import uwu.lopyluna.talon.baseRegistry.block_properties.kiln.KilnBlock;
+import uwu.lopyluna.talon.baseRegistry.block_properties.kiln.KilnBlockEntity;
+import uwu.lopyluna.talon.baseRegistry.block_properties.kiln.KilnMenu;
+import uwu.lopyluna.talon.baseRegistry.block_properties.kiln.KilnRecipe;
 
 import java.util.function.Supplier;
 
@@ -22,8 +32,11 @@ import static uwu.lopyluna.talon.baseRegistry.TalonRegistry.TalonProperties.Item
 
 @SuppressWarnings({"all"})
 public class TalonRegistry {
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Talon.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Talon.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Talon.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, Talon.MOD_ID);
+    public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Talon.MOD_ID);
     public static String UT = "_smithing_template";
     public static String PB = "_pebble";
     public static String PK = "_planks";
@@ -103,8 +116,13 @@ public class TalonRegistry {
             BlockProperties.requiresCorrectToolForDrops());
 
 
+    public static final RegistryObject<Block> Kiln = regBlock("kiln",
+            () -> new KilnBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)), ItemProperties);
 
 
+    public static final RegistryObject<BlockEntityType> KilnBE = BlockEntity("kiln", KilnBlockEntity::new, Kiln.get());
+    public static final RegistryObject<MenuType<KilnMenu>> KilnMenu = registerMenuType("kiln_menu", KilnMenu::new);
+    public static final RegistryObject<RecipeSerializer<KilnRecipe>> KilnSerializer = SERIALIZERS.register("kiln_cooking", () -> KilnRecipe.Serializer.INSTANCE);
 
 
 
@@ -122,6 +140,9 @@ public class TalonRegistry {
         public static Block.Properties BlockProperties = BlockBehaviour.Properties.copy(Blocks.STONE);
     }
 
+    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
+        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    }
     public static class CombustableItem extends Item {
         public int burnTime = 0;
         public CombustableItem(Properties pProperties, int burnTime) {super(pProperties);this.burnTime = burnTime;}
@@ -130,6 +151,10 @@ public class TalonRegistry {
     }
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Talon.MOD_ID);
+
+    public static RegistryObject<BlockEntityType> BlockEntity(String id, BlockEntityType.BlockEntitySupplier be, Block block) {
+        return BLOCK_ENTITIES.register(id, () -> BlockEntityType.Builder.of(be, block).build(null));
+    }
 
     public static RegistryObject<Item> Item(String id, Item.Properties pIProp) {
         return regItem(id.toLowerCase(), pIProp);}
@@ -167,9 +192,9 @@ public class TalonRegistry {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(Rose_Gold.get());
                         pOutput.accept(Rose_Gold_Nugget.get());
-                        pOutput.accept(Rose_Gold_Block.get().asItem());
                         pOutput.accept(Copper_Nugget.get());
 
+                        pOutput.accept(Kiln.get().asItem());
 
 
                         pOutput.accept(Cobblestone_PB.get());

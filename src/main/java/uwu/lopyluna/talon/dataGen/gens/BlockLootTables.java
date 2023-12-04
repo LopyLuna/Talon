@@ -21,6 +21,7 @@ public class BlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(TalonRegistry.Rose_Gold_Block.get());
+        this.dropSelf(TalonRegistry.Kiln.get());
 
     }
 

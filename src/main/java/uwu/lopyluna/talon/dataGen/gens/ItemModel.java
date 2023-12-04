@@ -54,6 +54,7 @@ public class ItemModel extends ItemModelProvider {
         simpleItem(TalonRegistry.Warped_UT);
         simpleItem(TalonRegistry.Rose_Gold);
         simpleItem(TalonRegistry.Rose_Gold_Nugget);
+        simpleItem(TalonRegistry.Copper_Nugget);
         simpleCombustableItem(TalonRegistry.Oak_PK);
         simpleCombustableItem(TalonRegistry.Spruce_PK);
         simpleCombustableItem(TalonRegistry.Birch_PK);
