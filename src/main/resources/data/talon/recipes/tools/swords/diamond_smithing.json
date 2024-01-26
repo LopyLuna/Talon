@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "tag": "minecraft:swords"
+  },
+  "result": {
+    "item": "minecraft:diamond_sword"
+  },
+  "template": {
+    "item": "talon:diamond_blade"
+  }
+}

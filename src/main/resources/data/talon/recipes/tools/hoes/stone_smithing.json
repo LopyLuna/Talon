@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "base": {
+    "tag": "minecraft:hoes"
+  },
+  "result": {
+    "item": "minecraft:stone_hoe"
+  },
+  "template": {
+    "item": "talon:stone_hoe_head"
+  }
+}

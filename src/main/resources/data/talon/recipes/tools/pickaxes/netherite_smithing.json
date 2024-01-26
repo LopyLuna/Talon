@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_scrap"
+  },
+  "base": {
+    "tag": "minecraft:pickaxes"
+  },
+  "result": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "template": {
+    "item": "talon:netherite_pickaxe_head"
+  }
+}

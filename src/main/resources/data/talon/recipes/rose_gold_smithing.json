@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": {
+    "item": "talon:rose_gold_ingot"
+  },
+  "template": {
+    "item": "minecraft:charcoal"
+  }
+}

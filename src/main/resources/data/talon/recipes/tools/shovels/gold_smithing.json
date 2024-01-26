@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "tag": "minecraft:shovels"
+  },
+  "result": {
+    "item": "minecraft:golden_shovel"
+  },
+  "template": {
+    "item": "talon:gold_shovel_head"
+  }
+}

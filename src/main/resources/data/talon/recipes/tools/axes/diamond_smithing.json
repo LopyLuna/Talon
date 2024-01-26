@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "tag": "minecraft:axes"
+  },
+  "result": {
+    "item": "minecraft:diamond_axe"
+  },
+  "template": {
+    "item": "talon:diamond_axe_head"
+  }
+}

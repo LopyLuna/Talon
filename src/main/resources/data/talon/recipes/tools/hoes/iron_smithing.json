@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "tag": "minecraft:hoes"
+  },
+  "result": {
+    "item": "minecraft:iron_hoe"
+  },
+  "template": {
+    "item": "talon:iron_hoe_head"
+  }
+}

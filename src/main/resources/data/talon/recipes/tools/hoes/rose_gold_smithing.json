@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:rose_gold_ingot"
+  },
+  "base": {
+    "tag": "minecraft:hoes"
+  },
+  "result": {
+    "item": "talon:rose_gold_hoe"
+  },
+  "template": {
+    "item": "talon:rose_gold_hoe_head"
+  }
+}

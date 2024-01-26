@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:rose_gold_ingot"
+  },
+  "base": {
+    "tag": "minecraft:pickaxes"
+  },
+  "result": {
+    "item": "talon:rose_gold_pickaxe"
+  },
+  "template": {
+    "item": "talon:rose_gold_pickaxe_head"
+  }
+}

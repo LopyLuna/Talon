@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:rose_gold_ingot"
+  },
+  "base": {
+    "tag": "minecraft:swords"
+  },
+  "result": {
+    "item": "talon:rose_gold_sword"
+  },
+  "template": {
+    "item": "talon:rose_gold_blade"
+  }
+}

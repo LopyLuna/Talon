@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "base": {
+    "tag": "minecraft:axes"
+  },
+  "result": {
+    "item": "minecraft:stone_axe"
+  },
+  "template": {
+    "item": "talon:stone_axe_head"
+  }
+}

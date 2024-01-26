@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_planks"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "talon:oak_planks"
+  }
+}

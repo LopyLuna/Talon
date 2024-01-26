@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_scrap"
+  },
+  "base": {
+    "tag": "minecraft:shovels"
+  },
+  "result": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "template": {
+    "item": "talon:netherite_shovel_head"
+  }
+}

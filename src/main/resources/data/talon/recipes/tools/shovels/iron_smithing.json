@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "tag": "minecraft:shovels"
+  },
+  "result": {
+    "item": "minecraft:iron_shovel"
+  },
+  "template": {
+    "item": "talon:iron_shovel_head"
+  }
+}

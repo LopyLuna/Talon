@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "minecraft:stone_tool_materials"
+  },
+  "base": {
+    "tag": "minecraft:swords"
+  },
+  "result": {
+    "item": "minecraft:stone_sword"
+  },
+  "template": {
+    "item": "talon:stone_blade"
+  }
+}
