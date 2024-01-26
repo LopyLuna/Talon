@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hanging_sign",
+  "key": {
+    "S": {
+      "tag": "forge:rods/wooden"
+    },
+    "#": {
+      "item": "talon:birch_planks"
+    },
+    "X": {
+      "item": "minecraft:chain"
+    }
+  },
+  "pattern": [
+    "XSX",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:birch_hanging_sign"
+  },
+  "show_notification": true
+}

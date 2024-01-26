@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_trapdoor",
+  "key": {
+    "#": {
+      "item": "talon:jungle_planks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:jungle_trapdoor"
+  },
+  "show_notification": true
+}

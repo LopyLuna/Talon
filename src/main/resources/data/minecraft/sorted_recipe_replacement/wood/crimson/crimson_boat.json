@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "boat",
+  "key": {
+    "#": {
+      "item": "talon:crimson_planks"
+    },
+    "S": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:crimson_boat"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "boat",
+  "key": {
+    "#": {
+      "item": "talon:acacia_planks"
+    },
+    "S": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:acacia_boat"
+  },
+  "show_notification": true
+}

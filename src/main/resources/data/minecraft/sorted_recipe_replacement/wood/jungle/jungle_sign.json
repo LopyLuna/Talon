@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_sign",
+  "key": {
+    "#": {
+      "item": "talon:jungle_planks"
+    },
+    "X": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " X "
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:jungle_sign"
+  },
+  "show_notification": true
+}
