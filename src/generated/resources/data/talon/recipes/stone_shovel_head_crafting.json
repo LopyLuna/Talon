@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "talon:template_shovel_head"
+    },
+    {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  ],
+  "result": {
+    "item": "talon:stone_shovel_head"
+  }
+}

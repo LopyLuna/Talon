@@ -2,8 +2,11 @@ package uwu.lopyluna.talon.dataGen.gens;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import uwu.lopyluna.talon.Talon;
 import uwu.lopyluna.talon.baseRegistry.TalonRegistry;
@@ -72,7 +75,50 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .unlockedBy(getHasName(TalonRegistry.Rose_Gold.get()), has(TalonRegistry.Rose_Gold.get())
                 ).save(pWriter, Talon.MOD_ID + ":rose_gold_upgrade_smithing_template_crafting");
 
+        TemplateRecipe2(TalonRegistry.Template_Blade.get(), Items.DIAMOND, TalonRegistry.diamond_blade.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.diamond_blade.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Pickaxe_head.get(), Items.DIAMOND, TalonRegistry.diamond_pickaxe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.diamond_pickaxe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Axe_head.get(), Items.DIAMOND, TalonRegistry.diamond_axe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.diamond_axe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe1(TalonRegistry.Template_Shovel_head.get(), Items.DIAMOND, TalonRegistry.diamond_shovel_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.diamond_shovel_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe2(TalonRegistry.Template_Hoe_head.get(), Items.DIAMOND, TalonRegistry.diamond_hoe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.diamond_hoe_head.getId().getPath().toLowerCase() + "_crafting");
 
+
+        TemplateRecipe2(TalonRegistry.Template_Blade.get(), Items.GOLD_INGOT, TalonRegistry.gold_blade.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.gold_blade.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Pickaxe_head.get(), Items.GOLD_INGOT, TalonRegistry.gold_pickaxe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.gold_pickaxe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Axe_head.get(), Items.GOLD_INGOT, TalonRegistry.gold_axe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.gold_axe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe1(TalonRegistry.Template_Shovel_head.get(), Items.GOLD_INGOT, TalonRegistry.gold_shovel_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.gold_shovel_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe2(TalonRegistry.Template_Hoe_head.get(), Items.GOLD_INGOT, TalonRegistry.gold_hoe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.gold_hoe_head.getId().getPath().toLowerCase() + "_crafting");
+
+        TemplateRecipe2(TalonRegistry.Template_Blade.get(), Items.IRON_INGOT, TalonRegistry.iron_blade.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.iron_blade.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Pickaxe_head.get(), Items.IRON_INGOT, TalonRegistry.iron_pickaxe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.iron_pickaxe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Axe_head.get(), Items.IRON_INGOT, TalonRegistry.iron_axe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.iron_axe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe1(TalonRegistry.Template_Shovel_head.get(), Items.IRON_INGOT, TalonRegistry.iron_shovel_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.iron_shovel_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe2(TalonRegistry.Template_Hoe_head.get(), Items.IRON_INGOT, TalonRegistry.iron_hoe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.iron_hoe_head.getId().getPath().toLowerCase() + "_crafting");
+
+        TemplateRecipe2(TalonRegistry.Template_Blade.get(), Ingredient.of(ItemTags.STONE_TOOL_MATERIALS), TalonRegistry.stone_blade.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.stone_blade.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Pickaxe_head.get(), Ingredient.of(ItemTags.STONE_TOOL_MATERIALS), TalonRegistry.stone_pickaxe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.stone_pickaxe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe3(TalonRegistry.Template_Axe_head.get(), Ingredient.of(ItemTags.STONE_TOOL_MATERIALS), TalonRegistry.stone_axe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.stone_axe_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe1(TalonRegistry.Template_Shovel_head.get(), Ingredient.of(ItemTags.STONE_TOOL_MATERIALS), TalonRegistry.stone_shovel_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.stone_shovel_head.getId().getPath().toLowerCase() + "_crafting");
+        TemplateRecipe2(TalonRegistry.Template_Hoe_head.get(), Ingredient.of(ItemTags.STONE_TOOL_MATERIALS), TalonRegistry.stone_hoe_head.get(), 1)
+                .save(pWriter, Talon.MOD_ID + ":" + TalonRegistry.stone_hoe_head.getId().getPath().toLowerCase() + "_crafting");
     }
 
 
@@ -90,6 +136,50 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .pattern("SS")
                 .define('S', input)
                 .unlockedBy(getHasName(input), has(input));
+    }
+
+    public static ShapelessRecipeBuilder TemplateRecipe1(Item template1, ItemLike mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .unlockedBy(getHasName(mat2), has(mat2));
+    }
+    public static ShapelessRecipeBuilder TemplateRecipe2(Item template1, ItemLike mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless (RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .requires(mat2)
+                .unlockedBy(getHasName(mat2), has(mat2));
+    }
+    public static ShapelessRecipeBuilder TemplateRecipe3(Item template1, ItemLike mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless (RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .requires(mat2)
+                .requires(mat2)
+                .unlockedBy(getHasName(mat2), has(mat2));
+    }
+
+    public static ShapelessRecipeBuilder TemplateRecipe1(Item template1, Ingredient mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE));
+    }
+    public static ShapelessRecipeBuilder TemplateRecipe2(Item template1, Ingredient mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless (RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .requires(mat2)
+                .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE));
+    }
+    public static ShapelessRecipeBuilder TemplateRecipe3(Item template1, Ingredient mat2,Item output, int count) {
+        return ShapelessRecipeBuilder.shapeless (RecipeCategory.MISC, output, count)
+                .requires(template1)
+                .requires(mat2)
+                .requires(mat2)
+                .requires(mat2)
+                .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE));
     }
 
     public static ShapelessRecipeBuilder DeCompressRecipe(Item input, Item output, int count) {

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "talon:gold_blade"
+  },
+  "result": {
+    "item": "talon:rose_gold_blade"
+  },
+  "template": {
+    "item": "talon:rose_gold_upgrade_smithing_template"
+  }
+}

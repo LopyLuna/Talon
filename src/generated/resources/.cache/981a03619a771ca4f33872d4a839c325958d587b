@@ -1,1 +1,6 @@
-// 1.20.1	2023-12-03T13:44:30.96333	Tags for minecraft:item mod id talon
+// 1.20.1	2024-01-26T20:20:53.5523294	Tags for minecraft:item mod id talon
+41201aead211ac1b9eef104eee9e21be604c018e data/minecraft/tags/items/axes.json
+c400d2e7827850305a644eb19018bc7b5f4578f4 data/minecraft/tags/items/hoes.json
+fb2ee30c63114f15a6e17c02b7fce1239389fda5 data/minecraft/tags/items/pickaxes.json
+38b5f4833d6b6a43b7bff9e8a98e21520ce56ea1 data/minecraft/tags/items/shovels.json
+40be9e3d53dd0f5777fcbcedaefb8b23d987ce07 data/minecraft/tags/items/swords.json
