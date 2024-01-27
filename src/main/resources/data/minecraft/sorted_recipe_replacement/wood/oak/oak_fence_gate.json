@@ -3,13 +3,16 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
     "W": {
       "item": "talon:oak_planks"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "WW#",
+    "WW#"
   ],
   "result": {
     "item": "minecraft:oak_fence_gate"
