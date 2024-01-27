@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-26T17:37:27.5397324	Item Models: talon
+// 1.20.1	2024-01-26T19:00:59.3771689	Item Models: talon
 bc11b5d5a4454ebb96dd3a13bde28c2c4c299dbb assets/talon/models/item/acacia_planks.json
 7139818a359d51f69d73c8c8328e7c483fea31e6 assets/talon/models/item/acacia_smithing_template.json
 ea56f09832e52a329ba25681397b0eff1dca16d6 assets/talon/models/item/andesite_pebble.json
@@ -47,6 +47,7 @@ f6191876fd3d4ab176e708eb6322fd38670bd70f assets/talon/models/item/iron_shovel_he
 913187ff22962e077374372ba50463b625e5a032 assets/talon/models/item/jungle_smithing_template.json
 9bd816cf376f2c7b0f15fc8fa553d90aec3b004a assets/talon/models/item/mangrove_planks.json
 dd5cf790344faca7045af0c8f775fe89876965ab assets/talon/models/item/mangrove_smithing_template.json
+8ee706ae09ad07fc0c62345256e7e1d9309ac52a assets/talon/models/item/mud_brick.json
 c2c83832bf8623c736de3cdbe75c9cbc7b90bc38 assets/talon/models/item/netherite_axe_head.json
 9bd314e06c50b18ca023f79d0324f0efa768938e assets/talon/models/item/netherite_blade.json
 6a17f4e3eec3914f2f2b695f864edcbb6ab0c82c assets/talon/models/item/netherite_hoe_head.json
@@ -56,6 +57,7 @@ c2c83832bf8623c736de3cdbe75c9cbc7b90bc38 assets/talon/models/item/netherite_axe_
 798cb23f7bad76bc1a6fa499a6f151fdd94c05bc assets/talon/models/item/netherrack_smithing_template.json
 e20831af5862cac84e370e75e0561aa73ecdb763 assets/talon/models/item/oak_planks.json
 53ed640a46140ac841d177766a005c88cf96f453 assets/talon/models/item/oak_smithing_template.json
+8db24f76ec7850d510362dce74a353637a5cd548 assets/talon/models/item/packed_mud_brick.json
 11753644a88b94540bd83f850eb4bbc9542eac99 assets/talon/models/item/rose_gold_axe.json
 3d93e473e1b8939b6836e3230a823b88e2c6098e assets/talon/models/item/rose_gold_axe_head.json
 7bf8c24433bba85677c796334af88f1f158d8d35 assets/talon/models/item/rose_gold_blade.json
@@ -68,6 +70,7 @@ ed446d481305db73b2a99617f90bc7bec309cb64 assets/talon/models/item/rose_gold_pick
 62b710e6e327f41f3ba11abdd69c9619b0aa1849 assets/talon/models/item/rose_gold_shovel.json
 471a1d963b5e9f415b65a72cb2d2760f9c1b5dbf assets/talon/models/item/rose_gold_shovel_head.json
 74ffeec5f1e91a5c0d0fda776007edef4497ec8d assets/talon/models/item/rose_gold_sword.json
+5e26226b5f7df3b206a1ecaa4d686414c47f675a assets/talon/models/item/rose_gold_upgrade_smithing_template.json
 de4cd443bd07e8478a0fd54fbb8cc5da60a71512 assets/talon/models/item/spruce_planks.json
 e2c5fc66a44693165b821d2b1d0bcd2a72d44344 assets/talon/models/item/spruce_smithing_template.json
 0941bb8ba7dc115838af49bf0c5720865ba8890a assets/talon/models/item/stone_axe_head.json
@@ -75,6 +78,12 @@ e2c5fc66a44693165b821d2b1d0bcd2a72d44344 assets/talon/models/item/spruce_smithin
 e283c74ae98d532100ae9e8f763b26516ca7ef23 assets/talon/models/item/stone_hoe_head.json
 fb51e893f49a4a13504b539e46205e73e50f393e assets/talon/models/item/stone_pickaxe_head.json
 464f5178e4d985310c5ac598655a805ab405fc35 assets/talon/models/item/stone_shovel_head.json
+a6492e0c8a1a736ab1b40f58e8b7b81fc90eefb9 assets/talon/models/item/template_axe_head.json
+4fde764c5a852075605812d4771dc7e4790d354b assets/talon/models/item/template_blade.json
+87cd863a797f548fe7c0a83bd8d11982c7c32d72 assets/talon/models/item/template_blank.json
+e7e770e083fb48f30f2952237dbf4fd870db2fcf assets/talon/models/item/template_hoe_head.json
+412073dc7e4b9e50991bb5a621a144db3ecd4dbd assets/talon/models/item/template_pickaxe_head.json
+04c5551adc07199e855207f731044e8dfc84f4ea assets/talon/models/item/template_shovel_head.json
 0ae90492a73bf50f84d947fe01a7f0da4d2c0961 assets/talon/models/item/tuff_pebble.json
 1a4c03b0a7d867ef23f96279b4c5865ffbaee73b assets/talon/models/item/tuff_smithing_template.json
 d731d821668bc2e16843080456d09aead78d85fc assets/talon/models/item/warped_planks.json

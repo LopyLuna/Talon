@@ -53,6 +53,15 @@ public class ItemModel extends ItemModelProvider {
         simpleItem(TalonRegistry.Rose_Gold);
         simpleItem(TalonRegistry.Rose_Gold_Nugget);
         simpleItem(TalonRegistry.Copper_Nugget);
+        simpleItem(TalonRegistry.Rose_Gold_UT);
+        simpleMudItem(TalonRegistry.Mud_Brick);
+        simpleMudItem(TalonRegistry.Packed_Mud_Brick);
+        simpleMudItem(TalonRegistry.Template_Blank);
+        simpleMudItem(TalonRegistry.Template_Blade);
+        simpleMudItem(TalonRegistry.Template_Axe_head);
+        simpleMudItem(TalonRegistry.Template_Pickaxe_head);
+        simpleMudItem(TalonRegistry.Template_Shovel_head);
+        simpleMudItem(TalonRegistry.Template_Hoe_head);
         simpleCombustableItem(TalonRegistry.Oak_PK);
         simpleCombustableItem(TalonRegistry.Spruce_PK);
         simpleCombustableItem(TalonRegistry.Birch_PK);
@@ -113,6 +122,11 @@ public class ItemModel extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Talon.MOD_ID,"item/" + item.getId().getPath()));
+    }
+    private ItemModelBuilder simpleMudItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Talon.MOD_ID,"item/mud/" + item.getId().getPath()));
     }
     private ItemModelBuilder toolItem(RegistryObject<TalonRegistry.ToolpartItem> item) {
         return withExistingParent(item.getId().getPath(),

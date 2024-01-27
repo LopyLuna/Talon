@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-26T18:42:13.3110111	Recipes
+// 1.20.1	2024-01-26T19:00:59.3737548	Recipes
 3f77c7c21c4c3de9e07509e693746a399d98e2b0 data/talon/advancements/recipes/misc/acacia_pk_to_acacia_planks.json
 69cc64dc24d5b03a38cc632f48e0443fba52d5c8 data/talon/advancements/recipes/misc/acacia_planks_to_acacia_pk.json
 68996f4484d00005c26771574240debe1442ae05 data/talon/advancements/recipes/misc/birch_pk_to_birch_planks.json
@@ -21,6 +21,7 @@ cd33e6af9793657e196810d893f7794ad65f3ba3 data/talon/advancements/recipes/misc/oa
 20af8e84e440414f0336f583caedb5386a02c6f7 data/talon/advancements/recipes/misc/rose_gold_nugget_to_rose_gold.json
 315c6e8d3d8d74f3dab38f91e212742561105550 data/talon/advancements/recipes/misc/rose_gold_to_rose_gold_block.json
 c3c99c59388a558ed507025124177125f559636b data/talon/advancements/recipes/misc/rose_gold_to_rose_gold_nugget.json
+6fe7612127946edc61d7b495396eb259b06ee063 data/talon/advancements/recipes/misc/rose_gold_upgrade_smithing_template_crafting.json
 9176911e492aba0fa8de5ced97ff749a45595099 data/talon/advancements/recipes/misc/spruce_pk_to_spruce_planks.json
 f3f6bc76bc7b73bb6bf0fe0aca48a4e877cc33be data/talon/advancements/recipes/misc/spruce_planks_to_spruce_pk.json
 b44bd645705b8d0d8f78381c11c74f3f55e74b63 data/talon/advancements/recipes/misc/template_blank_crafting.json
@@ -48,6 +49,7 @@ dbeeeb57942de43effb1112cba1121e432db7257 data/talon/recipes/mangrove_planks_to_m
 b34a759ed1d21b01372021c841aa13c763ec0114 data/talon/recipes/rose_gold_nugget_to_rose_gold.json
 775d11d8a12f11488f6cad63262f6f1d034e6490 data/talon/recipes/rose_gold_to_rose_gold_block.json
 bd71bbdf16dffd42529f860ce30f5a82f88b3e40 data/talon/recipes/rose_gold_to_rose_gold_nugget.json
+b1f1308ef7a5acfc208541c9ca15378bbda90a09 data/talon/recipes/rose_gold_upgrade_smithing_template_crafting.json
 12b5a80474e5d42613cc82901512fd29b75391fd data/talon/recipes/spruce_pk_to_spruce_planks.json
 8ee3a473e560e4648ac73cb6381402d7e89cfd5e data/talon/recipes/spruce_planks_to_spruce_pk.json
 a310bd68ea09c7838dfccde1690ba6c0b3d8e43c data/talon/recipes/template_blank_crafting.json

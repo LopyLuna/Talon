@@ -70,7 +70,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .define('C', Items.COPPER_INGOT)
                 .define('G', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(TalonRegistry.Rose_Gold.get()), has(TalonRegistry.Rose_Gold.get())
-                );
+                ).save(pWriter, Talon.MOD_ID + ":rose_gold_upgrade_smithing_template_crafting");
 
 
     }

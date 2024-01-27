@@ -82,8 +82,6 @@ public class TalonRegistry {
 
             //MATERIALS
 
-            Rose_Gold_UT = Item("rose_gold_upgrade_smithing_template", new Item.Properties()),
-
             Mud_Brick = Item("mud_brick", new Item.Properties()),
             Packed_Mud_Brick = Item("packed_mud_brick", new Item.Properties()),
             Template_Blank = Item("template_blank", new Item.Properties()),
@@ -179,6 +177,9 @@ public class TalonRegistry {
                     .stacksTo(1)
             ));
 
+    public static final RegistryObject<Item> Rose_Gold_UT = ITEMS.register("rose_gold_upgrade_smithing_template",
+            () -> new Item(new Item.Properties()
+            ));
 
 
     //BLOCKS + BLOCKS WITH PROPERTIES
@@ -289,16 +290,17 @@ public class TalonRegistry {
                         pOutput.accept(Rose_Gold_Block.get());
                         pOutput.accept(Rose_Gold.get());
                         pOutput.accept(Rose_Gold_Nugget.get());
-                        pOutput.accept(Copper_Nugget.get());
-
+                        pOutput.accept(Rose_Gold_UT.get());
                         pOutput.accept(Rose_Gold_Sword.get());
                         pOutput.accept(Rose_Gold_Pickaxe.get());
                         pOutput.accept(Rose_Gold_Axe.get());
                         pOutput.accept(Rose_Gold_Shovel.get());
                         pOutput.accept(Rose_Gold_Hoe.get());
 
+                        pOutput.accept(Copper_Nugget.get());
+                        pOutput.accept(Mud_Brick.get().asItem());
+                        pOutput.accept(Packed_Mud_Brick.get().asItem());
                         pOutput.accept(Kiln.get().asItem());
-
 
                         pOutput.accept(Cobblestone_PB.get());
                         pOutput.accept(Diorite_PB.get());
@@ -346,6 +348,7 @@ public class TalonRegistry {
                         pOutput.accept(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE);
                         pOutput.accept(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE);
                         pOutput.accept(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+                        pOutput.accept(Rose_Gold_UT.get());
                         pOutput.accept(Cobblestone_UT.get());
                         pOutput.accept(Diorite_UT.get());
                         pOutput.accept(Granite_UT.get());
@@ -374,35 +377,41 @@ public class TalonRegistry {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(rose_gold_axe_head.get()))
                     .title(Component.translatable("Toolparts"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(Template_Blank.get());
+                        pOutput.accept(Template_Pickaxe_head.get());
+                        pOutput.accept(Template_Axe_head.get());
+                        pOutput.accept(Template_Shovel_head.get());
+                        pOutput.accept(Template_Hoe_head.get());
+                        pOutput.accept(Template_Blade.get());
                         pOutput.accept(netherite_pickaxe_head.get());
-                        pOutput.accept(diamond_pickaxe_head.get());
-                        pOutput.accept(iron_pickaxe_head.get());
-                        pOutput.accept(rose_gold_pickaxe_head.get());
-                        pOutput.accept(gold_pickaxe_head.get());
-                        pOutput.accept(stone_pickaxe_head.get());
                         pOutput.accept(netherite_axe_head.get());
-                        pOutput.accept(diamond_axe_head.get());
-                        pOutput.accept(iron_axe_head.get());
-                        pOutput.accept(rose_gold_axe_head.get());
-                        pOutput.accept(gold_axe_head.get());
-                        pOutput.accept(stone_axe_head.get());
                         pOutput.accept(netherite_shovel_head.get());
-                        pOutput.accept(diamond_shovel_head.get());
-                        pOutput.accept(iron_shovel_head.get());
-                        pOutput.accept(rose_gold_shovel_head.get());
-                        pOutput.accept(gold_shovel_head.get());
-                        pOutput.accept(stone_shovel_head.get());
                         pOutput.accept(netherite_hoe_head.get());
-                        pOutput.accept(diamond_hoe_head.get());
-                        pOutput.accept(iron_hoe_head.get());
-                        pOutput.accept(rose_gold_hoe_head.get());
-                        pOutput.accept(gold_hoe_head.get());
-                        pOutput.accept(stone_hoe_head.get());
                         pOutput.accept(netherite_blade.get());
+                        pOutput.accept(diamond_pickaxe_head.get());
+                        pOutput.accept(diamond_axe_head.get());
+                        pOutput.accept(diamond_shovel_head.get());
+                        pOutput.accept(diamond_hoe_head.get());
                         pOutput.accept(diamond_blade.get());
+                        pOutput.accept(iron_pickaxe_head.get());
+                        pOutput.accept(iron_axe_head.get());
+                        pOutput.accept(iron_shovel_head.get());
+                        pOutput.accept(iron_hoe_head.get());
                         pOutput.accept(iron_blade.get());
+                        pOutput.accept(rose_gold_pickaxe_head.get());
+                        pOutput.accept(rose_gold_axe_head.get());
+                        pOutput.accept(rose_gold_shovel_head.get());
+                        pOutput.accept(rose_gold_hoe_head.get());
                         pOutput.accept(rose_gold_blade.get());
+                        pOutput.accept(gold_pickaxe_head.get());
+                        pOutput.accept(gold_axe_head.get());
+                        pOutput.accept(gold_shovel_head.get());
+                        pOutput.accept(gold_hoe_head.get());
                         pOutput.accept(gold_blade.get());
+                        pOutput.accept(stone_pickaxe_head.get());
+                        pOutput.accept(stone_axe_head.get());
+                        pOutput.accept(stone_shovel_head.get());
+                        pOutput.accept(stone_hoe_head.get());
                         pOutput.accept(stone_blade.get());
                     }).withSearchBar()
                     .build());
