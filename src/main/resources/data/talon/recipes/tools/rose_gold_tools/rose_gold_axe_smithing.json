@@ -1,15 +1,15 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "talon:rose_gold_ingot"
+    "item": "minecraft:copper_ingot"
   },
   "base": {
-    "tag": "minecraft:axes"
+    "item": "minecraft:golden_axe"
   },
   "result": {
     "item": "talon:rose_gold_axe"
   },
   "template": {
-    "item": "talon:rose_gold_axe_head"
+    "item": "talon:rose_gold_upgrade_smithing_template"
   }
 }

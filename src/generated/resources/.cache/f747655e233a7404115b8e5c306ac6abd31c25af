@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-25T21:16:43.759062	Item Models: talon
+// 1.20.1	2024-01-26T17:37:27.5397324	Item Models: talon
 bc11b5d5a4454ebb96dd3a13bde28c2c4c299dbb assets/talon/models/item/acacia_planks.json
 7139818a359d51f69d73c8c8328e7c483fea31e6 assets/talon/models/item/acacia_smithing_template.json
 ea56f09832e52a329ba25681397b0eff1dca16d6 assets/talon/models/item/andesite_pebble.json
@@ -56,13 +56,18 @@ c2c83832bf8623c736de3cdbe75c9cbc7b90bc38 assets/talon/models/item/netherite_axe_
 798cb23f7bad76bc1a6fa499a6f151fdd94c05bc assets/talon/models/item/netherrack_smithing_template.json
 e20831af5862cac84e370e75e0561aa73ecdb763 assets/talon/models/item/oak_planks.json
 53ed640a46140ac841d177766a005c88cf96f453 assets/talon/models/item/oak_smithing_template.json
+11753644a88b94540bd83f850eb4bbc9542eac99 assets/talon/models/item/rose_gold_axe.json
 3d93e473e1b8939b6836e3230a823b88e2c6098e assets/talon/models/item/rose_gold_axe_head.json
 7bf8c24433bba85677c796334af88f1f158d8d35 assets/talon/models/item/rose_gold_blade.json
+5f34fd6403605f490aa0ab42cae603d5e0a4b40c assets/talon/models/item/rose_gold_hoe.json
 f6a902e47b563deff0d6f158077ced7222e79ecc assets/talon/models/item/rose_gold_hoe_head.json
 be73b78df1671655182cfe29d3ae969138182081 assets/talon/models/item/rose_gold_ingot.json
 fbbcaa6fcd30772339138bd3808964afd3d7e8cd assets/talon/models/item/rose_gold_nugget.json
+ed446d481305db73b2a99617f90bc7bec309cb64 assets/talon/models/item/rose_gold_pickaxe.json
 540ff842a54d1abbcb854016f2d326586fecaaa9 assets/talon/models/item/rose_gold_pickaxe_head.json
+62b710e6e327f41f3ba11abdd69c9619b0aa1849 assets/talon/models/item/rose_gold_shovel.json
 471a1d963b5e9f415b65a72cb2d2760f9c1b5dbf assets/talon/models/item/rose_gold_shovel_head.json
+74ffeec5f1e91a5c0d0fda776007edef4497ec8d assets/talon/models/item/rose_gold_sword.json
 de4cd443bd07e8478a0fd54fbb8cc5da60a71512 assets/talon/models/item/spruce_planks.json
 e2c5fc66a44693165b821d2b1d0bcd2a72d44344 assets/talon/models/item/spruce_smithing_template.json
 0941bb8ba7dc115838af49bf0c5720865ba8890a assets/talon/models/item/stone_axe_head.json

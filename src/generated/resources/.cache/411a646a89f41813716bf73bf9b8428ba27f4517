@@ -1,3 +1,5 @@
-// 1.20.1	2024-01-25T20:11:20.1883322	Tags for minecraft:block mod id talon
+// 1.20.1	2024-01-26T17:37:27.5336461	Tags for minecraft:block mod id talon
+9d68afb4704b14be5cc255dd2ee87fd708f07709 data/forge/tags/blocks/storage_blocks.json
+9d68afb4704b14be5cc255dd2ee87fd708f07709 data/minecraft/tags/blocks/beacon_base_blocks.json
 9b465dcbe3b6ab1e2d0dd1825d3ac9473086071a data/minecraft/tags/blocks/mineable/pickaxe.json
 9d68afb4704b14be5cc255dd2ee87fd708f07709 data/minecraft/tags/blocks/needs_iron_tool.json

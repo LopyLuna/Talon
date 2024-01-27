@@ -28,9 +28,6 @@ public class Talon {
 
         TalonRegistry.ITEMS.register(e);
         TalonRegistry.BLOCKS.register(e);
-        TalonRegistry.BLOCK_ENTITIES.register(e);
-        TalonRegistry.SERIALIZERS.register(e);
-        TalonRegistry.MENUS.register(e);
         TalonRegistry.CREATIVE_MODE_TABS.register(e);
 
         MinecraftForge.EVENT_BUS.register(this);

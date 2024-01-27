@@ -58,6 +58,21 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         CompressRecipeQuad(TalonRegistry.Warped_PK.get(), Items.WARPED_PLANKS, 1).save(pWriter, Talon.MOD_ID + ":warped_pk_to_warped_planks");
         DeCompressRecipe(Items.WARPED_PLANKS, TalonRegistry.Warped_PK.get(), 4).save(pWriter, Talon.MOD_ID + ":warped_planks_to_warped_pk");
+
+        CompressRecipeQuad(TalonRegistry.Packed_Mud_Brick.get(), TalonRegistry.Template_Blank.get().asItem(), 2).save(pWriter, Talon.MOD_ID + ":template_blank_crafting");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TalonRegistry.Rose_Gold_UT.get(), 2)
+                .pattern("RGR")
+                .pattern("RTR")
+                .pattern("RCR")
+                .define('R', TalonRegistry.Rose_Gold.get())
+                .define('T', TalonRegistry.Template_Blank.get())
+                .define('C', Items.COPPER_INGOT)
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(TalonRegistry.Rose_Gold.get()), has(TalonRegistry.Rose_Gold.get())
+                );
+
+
     }
 
 

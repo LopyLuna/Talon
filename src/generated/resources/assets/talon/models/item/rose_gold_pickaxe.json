@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "talon:item/rose_gold_pickaxe"
+  }
+}

@@ -2,18 +2,22 @@ package uwu.lopyluna.talon.baseRegistry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.inventory.MenuType;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,21 +25,20 @@ import org.jetbrains.annotations.Nullable;
 import uwu.lopyluna.talon.Talon;
 import uwu.lopyluna.talon.baseRegistry.block_properties.KilnBlock;
 
+import java.util.List;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 
 @SuppressWarnings({"all"})
 public class TalonRegistry {
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Talon.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Talon.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Talon.MOD_ID);
-    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, Talon.MOD_ID);
-    public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Talon.MOD_ID);
     public static String UT = "_smithing_template";
     public static String PB = "_pebble";
     public static String PK = "_planks";
 
+    //ITEMS
 
     public static final RegistryObject<Item>
 
@@ -78,6 +81,17 @@ public class TalonRegistry {
             Warped_UT = Item("warped" + UT, new Item.Properties()),
 
             //MATERIALS
+
+            Rose_Gold_UT = Item("rose_gold_upgrade_smithing_template", new Item.Properties()),
+
+            Mud_Brick = Item("mud_brick", new Item.Properties()),
+            Packed_Mud_Brick = Item("packed_mud_brick", new Item.Properties()),
+            Template_Blank = Item("template_blank", new Item.Properties()),
+            Template_Blade = Item("template_blade", new Item.Properties()),
+            Template_Shovel_head = Item("template_shovel_head", new Item.Properties()),
+            Template_Pickaxe_head = Item("template_pickaxe_head", new Item.Properties()),
+            Template_Axe_head = Item("template_axe_head", new Item.Properties()),
+            Template_Hoe_head = Item("template_hoe_head", new Item.Properties()),
 
             Rose_Gold = Item("rose_gold_ingot", new Item.Properties()),
             Rose_Gold_Nugget = Item("rose_gold_nugget", new Item.Properties()),
@@ -142,6 +156,32 @@ public class TalonRegistry {
 
     ;
 
+    //ITEMS WITH PROPERTIES
+
+    public static final RegistryObject<Item> Rose_Gold_Sword = ITEMS.register("rose_gold_sword",
+            () -> new SwordItem(TalonTiers.TierRoseGold, 3, -2.4F, new Item.Properties()
+                    .stacksTo(1)
+            ));
+    public static final RegistryObject<Item> Rose_Gold_Shovel = ITEMS.register("rose_gold_shovel",
+            () -> new ShovelItem(TalonTiers.TierRoseGold, 1.5F, -3.0F, new Item.Properties()
+                    .stacksTo(1)
+            ));
+    public static final RegistryObject<Item> Rose_Gold_Pickaxe = ITEMS.register("rose_gold_pickaxe",
+            () -> new PickaxeItem(TalonTiers.TierRoseGold, 1, -2.8F, new Item.Properties()
+                    .stacksTo(1)
+            ));
+    public static final RegistryObject<Item> Rose_Gold_Axe = ITEMS.register("rose_gold_axe",
+            () -> new AxeItem(TalonTiers.TierRoseGold, 6.0F, -3.0F, new Item.Properties()
+                    .stacksTo(1)
+            ));
+    public static final RegistryObject<Item> Rose_Gold_Hoe = ITEMS.register("rose_gold_hoe",
+            () -> new HoeItem(TalonTiers.TierRoseGold, 0, -3.0F, new Item.Properties()
+                    .stacksTo(1)
+            ));
+
+
+
+    //BLOCKS + BLOCKS WITH PROPERTIES
 
     public static final RegistryObject<Block>
             Rose_Gold_Block = Block("rose_gold_block",
@@ -160,10 +200,24 @@ public class TalonRegistry {
 
 
 
+    //TAGS
+
+    public static class TalonItemTags {
 
 
 
+        private static TagKey<Item> tag(String name) {
+            return ItemTags.create(new ResourceLocation(Talon.MOD_ID, name));
+        }
+    }
+    public static class TalonBlockTags {
 
+        private static TagKey<Block> tag(String name) {
+            return BlockTags.create(new ResourceLocation(Talon.MOD_ID, name));
+        }
+    }
+
+    //CUSTOM SIMPLIFIED CODE HELPERS (I would call it)
 
     public static class CombustableItem extends Item {
         public int burnTime = 0;
@@ -177,10 +231,7 @@ public class TalonRegistry {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Talon.MOD_ID);
 
-    public static RegistryObject<BlockEntityType> BlockEntity(String id, BlockEntityType.BlockEntitySupplier be, Block block) {
-        return BLOCK_ENTITIES.register(id, () -> BlockEntityType.Builder.of(be, block).build(null));
-    }
-
+    //Make sures anything that is UpperCase turns to LowerCased
     public static RegistryObject<Item> Item(String id, Item.Properties pIProp) {
         return regItem(id.toLowerCase(), pIProp);}
 
@@ -221,6 +272,16 @@ public class TalonRegistry {
         };
     }
 
+    public class TalonTiers {
+        public static final Tier TierRoseGold = TierSortingRegistry.registerTier(
+                new ForgeTier(2, 250, 12.0F, 1.0F, 18,
+                        BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Rose_Gold.get())),
+                new ResourceLocation(Talon.MOD_ID, "rose_gold"), List.of(Tiers.GOLD), List.of());
+    }
+
+
+    // CREATIVE MODE TABS
+
     public static final RegistryObject<CreativeModeTab> TALON_TAB = CREATIVE_MODE_TABS.register("talon_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Rose_Gold.get()))
                     .title(Component.translatable(Talon.NAME))
@@ -229,6 +290,12 @@ public class TalonRegistry {
                         pOutput.accept(Rose_Gold.get());
                         pOutput.accept(Rose_Gold_Nugget.get());
                         pOutput.accept(Copper_Nugget.get());
+
+                        pOutput.accept(Rose_Gold_Sword.get());
+                        pOutput.accept(Rose_Gold_Pickaxe.get());
+                        pOutput.accept(Rose_Gold_Axe.get());
+                        pOutput.accept(Rose_Gold_Shovel.get());
+                        pOutput.accept(Rose_Gold_Hoe.get());
 
                         pOutput.accept(Kiln.get().asItem());
 

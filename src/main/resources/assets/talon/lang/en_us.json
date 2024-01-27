@@ -82,6 +82,25 @@
   "item.talon.gold_blade": "Gold Blade",
   "item.talon.stone_blade": "Stone Blade",
 
+  "item.talon.rose_gold_upgrade_smithing_template": "Rose Gold Upgrade",
+
+  "item.talon.rose_gold_sword": "Rose Gold Sword",
+  "item.talon.rose_gold_shovel": "Rose Gold Shovel",
+  "item.talon.rose_gold_pickaxe": "Rose Gold Pickaxe",
+  "item.talon.rose_gold_axe": "Rose Gold Axe",
+  "item.talon.rose_gold_hoe": "Rose Gold Hoe",
+
+  "item.talon.template_blank": "Template Blank",
+  "item.talon.template_blade": "Template Blade",
+  "item.talon.template_shovel_head": "Template Shovel Head",
+  "item.talon.template_pickaxe_head": "Template Pickaxe Head",
+  "item.talon.template_axe_head": "Template Axe Head",
+  "item.talon.template_hoe_head": "Template Hoe Head",
+
+  "item.talon.mud_brick": "Mud Brick",
+  "item.talon.packed_mud_brick": "Packed Mud Brick",
+
+
   "block.talon.rose_gold_block": "Block of Rose Gold",
   "block.talon.kiln": "Kiln"
 }

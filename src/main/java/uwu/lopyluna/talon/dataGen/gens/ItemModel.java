@@ -94,6 +94,14 @@ public class ItemModel extends ItemModelProvider {
         toolItem(TalonRegistry.gold_blade);
         toolItem(TalonRegistry.stone_blade);
 
+
+
+        handheldItem(TalonRegistry.Rose_Gold_Sword);
+        handheldItem(TalonRegistry.Rose_Gold_Pickaxe);
+        handheldItem(TalonRegistry.Rose_Gold_Axe);
+        handheldItem(TalonRegistry.Rose_Gold_Shovel);
+        handheldItem(TalonRegistry.Rose_Gold_Hoe);
+
     }
 
 
@@ -111,6 +119,13 @@ public class ItemModel extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Talon.MOD_ID,"item/toolparts/" + item.getId().getPath()));
     }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(Talon.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
     private ItemModelBuilder simpleCombustableItem(RegistryObject<TalonRegistry.CombustableItem> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
