@@ -23,11 +23,11 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-        CompressRecipeFull(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Block.get().asItem(), 1).save(pWriter, Talon.MOD_ID + ":rose_gold_to_rose_gold_block");
-        DeCompressRecipe(TalonRegistry.Rose_Gold_Block.get().asItem(), TalonRegistry.Rose_Gold.get(), 9).save(pWriter, Talon.MOD_ID + ":rose_gold_block_to_rose_gold");
+        CompressRecipeFull(TalonRegistry.Rose_Gold_Ingot.get(), TalonRegistry.Rose_Gold_Block.get().asItem(), 1).save(pWriter, Talon.MOD_ID + ":rose_gold_to_rose_gold_block");
+        DeCompressRecipe(TalonRegistry.Rose_Gold_Block.get().asItem(), TalonRegistry.Rose_Gold_Ingot.get(), 9).save(pWriter, Talon.MOD_ID + ":rose_gold_block_to_rose_gold");
 
-        CompressRecipeFull(TalonRegistry.Rose_Gold_Nugget.get(), TalonRegistry.Rose_Gold.get(), 1).save(pWriter, Talon.MOD_ID + ":rose_gold_nugget_to_rose_gold");
-        DeCompressRecipe(TalonRegistry.Rose_Gold.get(), TalonRegistry.Rose_Gold_Nugget.get(), 9).save(pWriter, Talon.MOD_ID + ":rose_gold_to_rose_gold_nugget");
+        CompressRecipeFull(TalonRegistry.Rose_Gold_Nugget.get(), TalonRegistry.Rose_Gold_Ingot.get(), 1).save(pWriter, Talon.MOD_ID + ":rose_gold_nugget_to_rose_gold");
+        DeCompressRecipe(TalonRegistry.Rose_Gold_Ingot.get(), TalonRegistry.Rose_Gold_Nugget.get(), 9).save(pWriter, Talon.MOD_ID + ":rose_gold_to_rose_gold_nugget");
 
         CompressRecipeFull(TalonRegistry.Copper_Nugget.get(), Items.COPPER_INGOT, 1).save(pWriter, Talon.MOD_ID + ":copper_nugget_to_copper_ingot");
         DeCompressRecipe(Items.COPPER_INGOT, TalonRegistry.Copper_Nugget.get(), 9).save(pWriter, Talon.MOD_ID + ":copper_ingot_to_copper_nugget");
@@ -68,11 +68,11 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .pattern("RGR")
                 .pattern("RTR")
                 .pattern("RCR")
-                .define('R', TalonRegistry.Rose_Gold.get())
+                .define('R', TalonRegistry.Rose_Gold_Ingot.get())
                 .define('T', TalonRegistry.Template_Blank.get())
                 .define('C', Items.COPPER_INGOT)
                 .define('G', Items.GOLD_INGOT)
-                .unlockedBy(getHasName(TalonRegistry.Rose_Gold.get()), has(TalonRegistry.Rose_Gold.get())
+                .unlockedBy(getHasName(TalonRegistry.Rose_Gold_Ingot.get()), has(TalonRegistry.Rose_Gold_Ingot.get())
                 ).save(pWriter, Talon.MOD_ID + ":rose_gold_upgrade_smithing_template_crafting");
 
         TemplateRecipe2(TalonRegistry.Template_Blade.get(), Items.DIAMOND, TalonRegistry.diamond_blade.get(), 1)

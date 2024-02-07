@@ -50,7 +50,7 @@ public class ItemModel extends ItemModelProvider {
         simpleItem(TalonRegistry.Cherry_UT);
         simpleItem(TalonRegistry.Crimson_UT);
         simpleItem(TalonRegistry.Warped_UT);
-        simpleItem(TalonRegistry.Rose_Gold);
+        simpleItem(TalonRegistry.Rose_Gold_Ingot);
         simpleItem(TalonRegistry.Rose_Gold_Nugget);
         simpleItem(TalonRegistry.Copper_Nugget);
         simpleItem(TalonRegistry.Rose_Gold_UT);

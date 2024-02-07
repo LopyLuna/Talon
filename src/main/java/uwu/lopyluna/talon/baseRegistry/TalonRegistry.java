@@ -6,24 +6,31 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.common.extensions.IForgeMenuType;
+import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 import uwu.lopyluna.talon.Talon;
 import uwu.lopyluna.talon.baseRegistry.block_properties.KilnBlock;
+import uwu.lopyluna.talon.baseRegistry.block_properties.KilnBlockEntity;
+import uwu.lopyluna.talon.baseRegistry.block_properties.KilnMenu;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -34,6 +41,8 @@ import java.util.function.ToIntFunction;
 public class TalonRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Talon.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Talon.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, Talon.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Talon.MOD_ID);
     public static String UT = "_smithing_template";
     public static String PB = "_pebble";
     public static String PK = "_planks";
@@ -91,7 +100,7 @@ public class TalonRegistry {
             Template_Axe_head = Item("template_axe_head", new Item.Properties()),
             Template_Hoe_head = Item("template_hoe_head", new Item.Properties()),
 
-            Rose_Gold = Item("rose_gold_ingot", new Item.Properties()),
+            Rose_Gold_Ingot = Item("rose_gold_ingot", new Item.Properties()),
             Rose_Gold_Nugget = Item("rose_gold_nugget", new Item.Properties()),
             Copper_Nugget = Item("copper_nugget", new Item.Properties());
 
@@ -193,7 +202,11 @@ public class TalonRegistry {
     public static final RegistryObject<KilnBlock> Kiln = regBlock("kiln",
             () -> new KilnBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).strength(3.5F).lightLevel(litBlockEmission(13))), new Item.Properties());
 
+    public static final RegistryObject<BlockEntityType<KilnBlockEntity>> Kiln_BE =
+            BLOCK_ENTITIES.register("kiln_be", () -> BlockEntityType.Builder.of(KilnBlockEntity::new, Kiln.get()).build(null));
 
+    public static final RegistryObject<MenuType<KilnMenu>> Kiln_Menu =
+            registerMenuType("kiln_menu", KilnMenu::new);
 
 
 
@@ -272,11 +285,14 @@ public class TalonRegistry {
             return p_50763_.getValue(BlockStateProperties.LIT) ? pLightValue : 0;
         };
     }
+    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
+        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    }
 
     public class TalonTiers {
         public static final Tier TierRoseGold = TierSortingRegistry.registerTier(
                 new ForgeTier(2, 250, 12.0F, 1.0F, 18,
-                        BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Rose_Gold.get())),
+                        BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Rose_Gold_Ingot.get())),
                 new ResourceLocation(Talon.MOD_ID, "rose_gold"), List.of(Tiers.GOLD), List.of());
     }
 
@@ -284,11 +300,11 @@ public class TalonRegistry {
     // CREATIVE MODE TABS
 
     public static final RegistryObject<CreativeModeTab> TALON_TAB = CREATIVE_MODE_TABS.register("talon_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Rose_Gold.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Rose_Gold_Ingot.get()))
                     .title(Component.translatable(Talon.NAME))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(Rose_Gold_Block.get());
-                        pOutput.accept(Rose_Gold.get());
+                        pOutput.accept(Rose_Gold_Ingot.get());
                         pOutput.accept(Rose_Gold_Nugget.get());
                         pOutput.accept(Rose_Gold_UT.get());
                         pOutput.accept(Rose_Gold_Sword.get());
